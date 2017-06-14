@@ -9,16 +9,16 @@
     <title>
         <? echo $title; ?> | Crowdsourcer.io
     </title>
-    <link href="/assets/fonts/stylesheet.css" rel="stylesheet">
-    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
-    <link href="/assets/css/new-main.css" rel="stylesheet">
-    <link href="/assets/css/notifications.css" rel="stylesheet">
-    <link href="/assets/css/colour-scheme.css" rel="stylesheet">
+    <link href="assets/fonts/stylesheet.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/new-main.css" rel="stylesheet">
+    <link href="assets/css/notifications.css" rel="stylesheet">
+    <link href="assets/css/colour-scheme.css" rel="stylesheet">
 
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/n_m.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/n_m.js"></script>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

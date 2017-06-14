@@ -1,4 +1,4 @@
-<? include("templates/header.php"); ?>
+<? include("./templates/header.php"); ?>
 
 <h1>Hello World</h1>
 
@@ -15,4 +15,4 @@
    <li>To create an entirely new page create a file such as "my-page.php" and include the header and footer in the index. Then simply navigate to it in your browser.</li>
 </ul>
 
-<? include("templates/footer.php"); ?>
+<? include("./templates/footer.php"); ?>
