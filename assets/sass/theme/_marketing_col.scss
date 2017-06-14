@@ -1,0 +1,21 @@
+// Marketing
+
+.highlight-blue {
+    background-color:$primary_colour;
+    p {
+        color: lighten($primary_colour, 35%);
+    }
+}
+
+.features-clean, .features-boxed {
+    .item .icon {
+        color:$primary_colour;
+    }
+}
+
+.parallax-banner {
+    background-color:$secondary_colour;
+}
+.header__bg {
+    background-image:linear-gradient($primary_colour, $secondary_colour);
+}

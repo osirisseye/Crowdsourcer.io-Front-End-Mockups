@@ -1,0 +1,23 @@
+.help_button {
+    color: $primary_colour;
+    font-size: 18px;
+    cursor: pointer; cursor: hand;
+    &:hover, &:visited, &:active, &:focus {
+        color: darken($primary_colour, 10%);
+    }
+}
+.card-text-help {
+    .help_button {
+        padding: 0px 0px 0px 10px;
+    }
+}
+
+.tab-panel-button {
+    .help_button {
+        padding: 10px 10px 0px 10px;
+    }
+}
+
+.card_header_help_button {
+    margin-left: auto;
+}

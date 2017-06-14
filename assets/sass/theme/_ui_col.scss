@@ -1,0 +1,95 @@
+// UI 
+.button {
+    background: $primary_colour;
+    &:active,
+    &:hover {
+        background: rgba($primary_colour, 0.7)
+    }
+}
+
+.pagination>li>a {
+    color: $primary_colour;
+    &:hover {
+        color: darken($primary_colour, 10%)
+    }
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: $primary_colour;
+    border-color: $primary_colour;
+}
+
+.add_another_position:hover {
+    background-color: rgba($primary_colour, 0.1);
+    border: 1px rgba($primary_colour, 0.7) dashed;
+}
+
+.mission_control_nav_list>li>a {
+    color: $primary_colour;
+    &:hover {
+        background-color: rgba($primary_colour, 0.1);
+    }
+}
+
+.mission_control_nav_list>li.active>a,
+.mission_control_nav_list>li.active>a:hover,
+.mission_control_nav_list>li.active>a:focus,
+.mission_control_nav_list>li.active>a:active {
+    background-color: $primary_colour;
+}
+
+button.add_another_task:hover {
+    background-color: rgba($primary_colour, 0.1);
+    border: 1px rgba($primary_colour, 0.7) dashed;
+    color: $primary_colour;
+}
+
+.btn.btn-custom {
+    border-color: $primary_colour;
+    border-bottom-color: darken($primary_colour, 10%);
+    background-color: $primary_colour;
+    box-shadow: 0 2px 3px rgba($primary_colour, 0.3);
+    &:focus,
+    &:active {
+        background-color: darken($primary_colour, 10%);
+        border-color: darken($primary_colour, 10%);
+        border-bottom-color: darken($primary_colour, 10%);
+    }
+}
+
+.callout-info {
+    border-left-color: $primary_colour;
+}
+
+.sidebar_badge {
+    background-color: $primary_colour;
+    .active {
+        color: $primary_colour;
+    }
+}
+
+.step.custom .nav-tabs {
+    &>li>a,
+    &>li uib-tab-heading {
+        color: $primary_colour;
+        .icon {
+            background-color: $primary_colour;
+        }
+    }
+    &>li.active>a,
+    &>li.active>a:focus,
+    &>li.active>a:hover,
+    &>li.active uib-tab-heading {
+        color: $primary_colour;
+    }
+    &:after {
+        background-color: $primary_colour;
+    }
+}
+
+@import 'mission_control_col';

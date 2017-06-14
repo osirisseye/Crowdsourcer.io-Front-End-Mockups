@@ -1,0 +1,88 @@
+body {
+  font-family: $normal;
+  font-weight: 200;
+  color: #464646;
+  /*    fixed content*/
+  padding-top: 50px;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 300;
+}
+
+label {
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.container-fluid {
+  /*
+    margin: 0px; */
+  /* padding: 0px;*/
+}
+
+.no_padding {
+  margin: 0px;
+  padding: 0px;
+}
+
+.voffset {
+  margin-top: 10px !important;
+}
+
+.voffset-xs {
+  margin-top: 15px !important;
+}
+
+.voffset-sm {
+  margin-top: 25px !important;
+}
+
+.voffset-md {
+  margin-top: 40px !important;
+}
+
+.voffset-lg {
+  margin-top: 75px !important;
+}
+
+.vmarg {
+  margin-bottom: 10px !important;
+}
+
+.vmarg-xs {
+  margin-bottom: 15px !important;
+}
+
+.vmarg-sm {
+  margin-bottom: 25px !important;
+}
+
+.vmarg-md {
+  margin-bottom: 40px !important;
+}
+
+.vmarg-lg {
+  margin-bottom: 75px !important;
+}
+
+.nvmarg {
+  margin-bottom: 0px !important;
+}
+
+.nvoffset {
+  margin-top: 0px !important;
+}
+
+.clearboth {
+  clear: both;
+  display: block;
+}
+
+.pre_area {
+  white-space: pre-wrap;
+}

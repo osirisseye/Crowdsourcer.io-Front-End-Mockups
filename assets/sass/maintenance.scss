@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+$pacif: 'Pacifico', cursive;
+
+@import './theme/colourvars';
+@import './theme/bootstrap_widths';
+
+body{
+    background-color: $primary_colour;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
+h1 {
+    font-family: $pacif;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+.row {
+    margin: 50px 25px;
+
+}

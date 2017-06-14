@@ -1,0 +1,268 @@
+.highlight-phone,
+.features-clean,
+.highlight-blue,
+.parallax-banner
+ {
+    h1,
+    h2,
+    h3 {
+        font-family: $pacif;
+    }
+    
+}
+.highlight-phone {
+
+    .intro h2  {
+    font-family: 'open sans';
+    font-weight: 100;
+    }
+    .laptop-img {
+        width: 100%;
+    }
+}
+
+.dh-header-non-rectangular-container {
+    padding-top: 0px;
+    img {
+        margin-top: -30px;
+        width: 80%;
+        @media screen and (max-width: $screen-md-max) {
+                margin-top: 20px;
+            }
+        @media screen and (max-width: $screen-sm-max) {
+                width: 100%;
+                margin-top: 20px;
+            }
+        @media screen and (max-width: $screen-xs-max) {
+            width: 90%;
+            margin-top: 75px;
+        }
+    }
+}
+
+.parallax-banner {
+    padding-top: 25px;
+    h1, h2 {
+        color: white;
+    }
+    h1 {
+        font-size: 5em;
+        margin-top: 150px;
+    }
+    h2 {
+font-size: 3em;
+    }
+}
+
+#about_container {
+    p {
+        &.intro {
+            font-size: 22px;
+            font-weight: regular;
+        }
+        font-size: 18px;
+    }
+}
+
+.features-clean {
+    color: #313437;
+    background-color: #fff;
+    padding-bottom: 30px;
+    @media (max-width: 767px) {
+        padding-bottom:10px;
+    }
+    p {
+        color: #7d8285;
+        &.subtitle {
+            font-size: 18px;
+        }
+    }
+    &.home_page_features {
+        h3 {
+            font-family: $normal;
+            text-align: center;
+        }
+    }
+    h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        color: inherit;
+        @media (max-width: 767px) {
+            margin-bottom:25px;
+            padding-top: 25px;
+            font-size: 24px;
+        }
+    }
+    .side-image {
+        max-width: 100%;
+        max-height: 360px;
+    }
+    .intro {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto 60px;
+        @media (max-width: 767px) {
+            margin-bottom:40px;
+        }
+    }
+    &.no-icons {
+         .item { 
+             padding-left: 15px;
+         }
+    }
+    .item {
+        min-height: 100px;
+        padding-left: 80px;
+        margin-bottom: 40px;
+        @media (max-width: 767px) {
+            min-height:0;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            color: inherit;
+        }
+        .icon {
+            font-size: 40px;
+            color: #1485ee;
+            float: left;
+            margin-left: -65px;
+        }
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: inherit;
+        }
+        .description {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.pcg-banner {
+    display: block;
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+    i {
+        font-size: 10em;
+        color: $quaternary_colour;
+    }
+    h2,
+    h3 {
+        .normal-font & {
+            font-family: $normal;
+        }
+        font-family: $pacif;
+        color: $quaternary_colour;
+    }
+    h2,
+    h3,
+    i {
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+    }
+    &:hover,
+    {
+        // background-color: lighten($primary_colour, 35%);
+        i,
+        h2,
+        h3 {
+            color: lighten($quaternary_colour, 10%);
+        }
+    }
+    .text-area {
+        text-align: left;
+    }
+    .icon {
+        text-align: right;
+    }
+    .text-area, .icon {
+        @media #{$xs-only} {
+            text-align: center;
+        }
+    }
+}
+
+//@extend-elements
+//original selectors
+//.highlight-blue .buttons .btn-primary, .highlight-blue .buttons .btn-primary:active
+%extend_high_blue {
+	border: 2px solid rgba(255,255,255,0.7);
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 6px;
+	color: #ebeff1;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none;
+	padding: 14px 24px;
+	background: transparent;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: background-color 0.25s;
+}
+
+
+.highlight-blue {
+	color: #fff;
+	background-color: #1e6add;
+	padding: 50px 0;
+	p {
+		color: #c4d5ef;
+		line-height: 1.5;
+	}
+	h2 {
+		font-weight: normal;
+		margin-bottom: 25px;
+		line-height: 1.5;
+		padding-top: 0;
+		margin-top: 0;
+		color: inherit;
+	}
+	.intro {
+		font-size: 16px;
+		max-width: 500px;
+		margin: 0 auto 25px;
+	}
+	.buttons {
+		text-align: center;
+		.btn {
+			padding: 16px 32px;
+			margin: 6px;
+			border: none;
+			background: none;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+			//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			text-shadow: none;
+			opacity: 0.9;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 13px;
+			letter-spacing: 0.4px;
+			line-height: 1;
+			&:hover {
+				opacity: 1;
+			}
+			&:active {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translateY(1px);
+			}
+            &.btn-primary {
+                @extend %extend_high_blue;
+                &:active {
+                    @extend %extend_high_blue;
+                }
+            }
+		}
+		
+	}
+}

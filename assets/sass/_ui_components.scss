@@ -1,0 +1,18 @@
+
+a {
+    .card, &.card.card-banner {
+        // transition-property: color;
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+}
+
+.card {
+    a  {
+        transition-property: color;
+    }
+}
+
+@import "./ui/ui_badges";
+@import "./ui/ui_buttons";
+@import "./ui/ui_feedback_widget";
+@import "./ui/ui_help_button";

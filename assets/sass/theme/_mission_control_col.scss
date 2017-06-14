@@ -1,0 +1,24 @@
+// Mission Control
+.sidebar ul.nav {
+    ul.children li a {
+        color: $primary_colour!important;
+    }
+    .active a,
+    li.parent a.active,
+    .active>a:hover,
+    li.parent a.active:hover,
+    .active>a:focus,
+    li.parent a.active:focus {
+        background-color: $primary_colour;
+    }
+
+    li.current a { 
+        background-color: $primary_colour;
+    }
+}
+
+.sidebar>ul>li>a,
+.sidebar>ul>li>a:hover,
+.sidebar>ul>li>a:focus {
+    color: $primary_colour;
+}

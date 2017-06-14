@@ -1,0 +1,14 @@
+@import './theme/colourvars';
+
+// Footer
+
+footer.main_footer {
+    // background-color: rgba($secondary_colour, 0.1);
+
+   .fa.footer-contacts-icon, .social-links a {
+        background-color:$primary_colour;
+    }
+}
+
+@import './theme/marketing_col';
+@import './theme/ui_col';

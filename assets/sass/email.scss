@@ -1,0 +1,25 @@
+$normal: 'Open Sans', sans-serif;
+@import "./ui/ui_bootstrap_email";
+@import "main_basics";
+
+body#email_body {
+    background-color: #f1f4f7;
+    margin: 20px;
+    padding: 0px;
+    overflow-y: auto;
+}
+
+.email_content {
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 0px 50px;
+}
+
+.email_icon {
+  max-height: 45px;
+  max-width: 100%;
+}
+
+@import "./ui/ui_badges";
+@import "./ui/ui_buttons";
+@import "./pages/mctrl_contributors"; // For profile images

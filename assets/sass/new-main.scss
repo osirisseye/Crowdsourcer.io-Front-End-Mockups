@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+
+$pacif: 'Pacifico', cursive;
+$dancing: 'Dancing Script', cursive;
+$cookie: 'Cookie', cursive;
+$normal: 'Open Sans';
+
+@import './theme/colourvars';
+@import './theme/bootstrap_widths';
+@import "main_basics";
+
+html {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+#site_header {
+    .navbar-center {
+        @media #{$sm-down} {
+            padding-top: 12px;
+        }
+    }
+    .icon-logo {
+        color: $primary_colour;
+        font-size: 1.8em;
+        @media #{$sm-down} {
+            font-size: 1.38em;
+        }
+    }
+}
+
+footer.main_footer {
+    h1, h2, h3, h4 {
+    font-family: $pacif;
+        .icon-logo {
+            font-size: 1.5em;
+        }
+    }
+
+    .social-links {
+        &.social-icons {
+            a {
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+}
+
+.funky_text {
+    font-family: $pacif;
+}
+
+p.form-error {
+    color: #d50000;
+}
+
+.project_title {
+    h1 {
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+}
+
+@import './pages/mctrl_contributors';
+
+@import './pages/slides';
+@import './pages/marketing';
+@import './pages/creation';
+@import 'ui_components';

@@ -1,0 +1,193 @@
+body {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    /*    Flex*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+.navbar, .footer {
+    flex: none;
+}
+
+.page_content {
+    flex: 1 0 auto;
+    padding: var(--space) var(--space) 0;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.page_content::after {
+    content: '\00a0';
+    /* &nbsp; */
+    display: block;
+    margin-top: var(--space);
+    height: 0px;
+    visibility: hidden;
+}
+
+@media (--break-lg) {
+    .page_content {
+        padding-top: var(--space-lg);
+    }
+    .page_content::after {
+        margin-top: var(--space-lg);
+    }
+}
+
+.page_content--full {
+    padding: 0;
+}
+
+.page_content--full::after {
+    content: none;
+}
+
+
+/* If you want to center anything, put it in this container*/
+
+.centre_content_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*    Fix for no defined height*/
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    min-height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: -webkit-fit-content;
+    /*    Flex*/
+    display: -webkit-box;
+    /*display: -moz-box;*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    /*    align*/
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    /*    justify*/
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+}
+
+.dashboard_container {
+    margin: 0px;
+    /*    If you want fixed footer in Mssn Ctrl */
+    /*
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 60px;
+    overflow: scroll;
+*/
+}
+
+
+/* Login and Registration */
+
+.login_reg_page_container {
+    flex-direction: column;
+}
+
+.login_reg_container {
+    margin: 25px;
+    text-align: center;
+    min-height: auto;
+}
+
+.login_subtext {
+    text-align: center;
+}
+
+
+/* Media Gallery Sorting */
+
+#media_list_container {
+    /*display: table;*/
+}
+
+.media_thumbnail_clear_container {
+    /*display: table-cell;*/
+    /*display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;*/
+}
+
+.media_thumbnail_clear_container .thumbnail {
+    display: flex;
+    flex-direction: row;
+}
+
+.media_drag_handle {
+    /*flex: 1;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.media_bin_link {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+
+/* User Profile */
+
+.card.mini-position-card .card-header.mini-project-card-title {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* Widget builder */
+
+.widget_type_selection {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.widget_type_selection>a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    flex-direction: column;
+}
+
+.widget_type_item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.widget_type_item>img {
+    -webkit-align-self: center;
+    align-self: center;
+    margin: 10px;
+}

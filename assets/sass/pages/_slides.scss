@@ -1,0 +1,89 @@
+    .header_hero {
+        height: 500px;
+        .carousel .item {
+            height: 500px;
+        }
+    }
+
+    #welcome_slide {
+        background-color: $primary_colour;
+        background-image:linear-gradient($primary_colour, $secondary_colour);
+        color: white; 
+       
+        font-family: $pacif;
+        #welcome_slide_bg {
+            height: 100%;
+            width: 100%;
+             background-image: url(/assets/images/clouds.svg);
+            background-position: center;
+            background-size: cover;
+        }
+        a {
+            // color: lighten($secondary_colour, 35%);
+            color: white;
+        }
+        h1 {
+            font-weight: 100;
+            font-size: 3em;
+            .slide_title {
+                padding-top: 30px;
+                font-weight: 400;
+                text-align: left;
+                @media screen and (min-width: $screen-md-min) {
+                    margin-left: 10%;
+                }
+                @media screen and (max-width: $screen-sm-max) {
+                    text-align: center;
+                }
+            }
+        }
+        h2 {
+            font-size: 2em;
+        }
+        img {
+            width: 80%;
+            margin: 5% auto 0 auto;
+            @media screen and (max-width: $screen-sm-max) {
+                width: 90%;
+                margin-top: 50px;
+            }
+            @media screen and (max-width: $screen-xs-max) {
+                width: 90%;
+                margin-top: 75px;
+            }
+        }
+    }
+
+     #contribute_slide { 
+        background-color: $quaternary_colour;
+        background-image:linear-gradient($tertiary_colour, $quaternary_colour);
+        a {
+            color: inherit;
+            &:hover {
+                color: inherit;
+            }
+        }
+        #contribute_slide_bg {
+            height: 100%;
+            width: 100%;
+             background-image: url(/assets/images/stream-overlay.svg);
+            background-position: center;
+            background-size: cover;
+        }
+        h1, h2, h3 {
+            font-family: $pacif;
+            color: white;
+            &.giant {
+                font-size: 5em;
+                @media screen and (max-width: $screen-sm-max) {
+                    font-size: 4em;
+                }
+            }
+            .icon-logo {
+                // font-size: 1.5em;
+                // @media screen and (max-width: $screen-sm-max) {
+                //     font-size: 1em;
+                // }
+            }
+        }
+     }
