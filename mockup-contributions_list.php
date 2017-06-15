@@ -486,14 +486,7 @@
                 <ul class="nav menu">
                     <li>
                         <p class="nvmarg voffset-sm mission_control_nav_text">
-                            <!--
-            <span class="fa-stack fa-lg">
-  <i class="fa fa-square fa-stack-2x"></i>
-  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
-</span>
--->
                             <span class="fa fa-terminal fa-lg" aria-hidden="true"></span><strong style="vertical-align:middle;">&nbsp; Mission Control</strong>
-
                             <br>Crowdsourcer.io. <a href="/project/29">Project page</a>
                         </p>
                     </li>
@@ -507,20 +500,9 @@
 
                     <li role="presentation"><a href="/mission-control/29/chat"><span class="fa fa-comments" aria-hidden="true"></span> Chat</a>
                     </li>
-
                 </ul>
-
-
-<!--
-<ul class="nav nav-pills nav-stacked mission_control_nav_list">
-    <li role="presentation" ><a href="/mission-control/29">Dashboard</a></li>
-     <li role="presentation" ><a href="/mission-control/29/tasks">Tasks</a></li>
-    <li role="presentation" class="active"><a href="/mission-control/29/contributors">Contributors</a></li>
-    </ul>
--->
-
             </div>
-            <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main_mission_control_content">
+            <div class="col-sm-12 main_mission_control_content">
                 <div id="ContributorButtons">
                     <div id="ContributorViews" class="btn-group" data-toggle="buttons">
                       <label class="btn btn-default active">
@@ -893,10 +875,12 @@
     $(function() {
       var $contextMenu = $("#ContributorOverflowMenu");
       $("*[data-context-menu]").on("click", function(e) {
+        var pos = getContextMenuPostion(e, $contextMenu)
         $contextMenu.css({
           display: "block",
-          left: e.pageX,
-          top: e.pageY
+          // TODO(Chris C): The following math is temporary, there is a bug.
+          left: pos.x / 2,
+          top: pos.y - 40
         });
         return false;
       });
@@ -907,6 +891,32 @@
          $contextMenu.hide();
       });
     });
+
+    function getContextMenuPostion(event, contextMenu) {
+
+        var mousePosition = {};
+        var menuPostion = {};
+        var menuDimension = {};
+
+        menuDimension.x = contextMenu.outerWidth();
+        menuDimension.y = contextMenu.outerHeight();
+        mousePosition.x = event.pageX;
+        mousePosition.y = event.pageY;
+
+        if (mousePosition.x + menuDimension.x > $(window).width() + $(window).scrollLeft()) {
+            menuPostion.x = mousePosition.x - menuDimension.x;
+        } else {
+            menuPostion.x = mousePosition.x;
+        }
+
+        if (mousePosition.y + menuDimension.y > $(window).height() + $(window).scrollTop()) {
+            menuPostion.y = mousePosition.y - menuDimension.y;
+        } else {
+            menuPostion.y = mousePosition.y;
+        }
+
+        return menuPostion;
+    }
 </script>
 
 <? include("./partials/footer.php"); ?>
