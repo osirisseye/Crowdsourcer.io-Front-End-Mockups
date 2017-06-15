@@ -1,8 +1,4 @@
-<?
-    $hide_footer = false;
-    $show_minimal_footer = false;
-    $is_mission_control = false;
-?>
+<? $is_mission_control ? include("ignore_mctrl_bottom.php") : ""?>
 
 <div class="clearboth"></div>
 

@@ -1,8 +1,3 @@
-<?
-    $title = "testing";
-    $loggedin = FALSE;
-?>
-
 <html>
 
 <head>
@@ -15,6 +10,7 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/new-main.css" rel="stylesheet">
     <link href="assets/css/notifications.css" rel="stylesheet">
+    <?= $is_mission_control ? '<link href="assets/css/missioncontrol.css" rel="stylesheet">' : ""?>
     <link href="assets/css/colour-scheme.css" rel="stylesheet">
 
     <script src="assets/js/jquery.min.js"></script>
@@ -116,3 +112,5 @@
         <!-- /.container -->
     </nav>
     <div class="container-fluid page_content">
+
+    <? include("ignore_mctrl_top.php") ?>
