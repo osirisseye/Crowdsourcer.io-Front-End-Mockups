@@ -16,9 +16,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/n_m.js"></script>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 </head>
 
 <body>
@@ -112,5 +110,4 @@
         <!-- /.container -->
     </nav>
     <div class="container-fluid page_content">
-
-    <? include("ignore_mctrl_top.php") ?>
+    <? include("mission_control_top.php") ?>
