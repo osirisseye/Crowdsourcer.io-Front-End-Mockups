@@ -4,7 +4,7 @@
   DO NOT EDIT THIS PAGE :D
   - If you need a page to copy, pick anything with a 'template-' prefix.
 ################################ */
-require("/includes/full_page_header.php");
+require("./includes/full_page_header.php");
 
 // Custom PHP goes here...
 
@@ -78,4 +78,4 @@ require("/includes/full_page_header.php");
   </div>
 </div>
 
-<?php include("/partials/footer.php"); ?>
+<?php include("./partials/footer.php"); ?>
