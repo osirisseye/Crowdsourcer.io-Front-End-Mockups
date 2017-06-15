@@ -73,9 +73,9 @@ require("/includes/full_page_header.php");
   <div class="col-xs-12 col-sm-4">
     <h2>Uploaded Files</h2>
     <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-      <? printDirectoriesAsList(dirname(__FILE__)) ?>
+      <?php printDirectoriesAsList(dirname(__FILE__)) ?>
     </ul>
   </div>
 </div>
 
-<? include("/partials/footer.php"); ?>
+<?php include("/partials/footer.php"); ?>
