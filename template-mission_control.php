@@ -1,4 +1,7 @@
 <?php
+    // Use this space to change the default page variables.
+    // $loggedin = true;
+    
     // Leave this in, loads all state and style.
     include("./includes/full_mission_control_header.php");
 
