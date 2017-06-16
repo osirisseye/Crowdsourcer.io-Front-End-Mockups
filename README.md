@@ -12,12 +12,12 @@ You have to have XAMPP/APACHE or some other PHP server to view this repo. If you
 Start by looking through the pages and pick a starting point. Copy and rename the file to something detailed. (eg. 'conributions-list-mockup'). And add numbers if there is already a mockup of that type.
 
 ## Naming Things
-Let's follow some basic naming conventions. Pay attention to "-" and "" Use underscores to separate different words 'eg. task-detail'. Use dashes to separate different parts of a name. 'eg template-task_detail'. Doing this will allow me to organize these via a script later :D.
+Let's follow some basic naming conventions. Pay attention to "-" and "\_" Use underscores to separate different words 'eg. task\_detail'. Use dashes to separate different parts of a name. 'eg template-task_detail'. Doing this will allow me to organize these via a script later :D.
 
 | Type          | How To Name                | Second Header                                   |
 | ------------- | -------------------------- | ----------------------------------------------- |
-| Mockup:       | mockup-{{page_name}}       | Random design to share ideas, start discussion. |
-| Template:     | template-{{page_type}}     | Templates for a specific page type.             |
+| Mockup:       | mockup-{{page\_name}}       | Random design to share ideas, start discussion. |
+| Template:     | template-{{page\_type}}     | Templates for a specific page type.             |
 | Task:         | task-{{task-name}}-v{{##}} | Proposal for a task w/ version number.          |
 
 # XAMPP/APACHE setup for Windows
