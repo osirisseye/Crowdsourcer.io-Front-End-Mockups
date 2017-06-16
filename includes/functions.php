@@ -48,7 +48,8 @@ function icon($name){
 }
 
 function getLink($url, $pageName, $class = ''){
-  $link = '<a title="Mockup of the ' . $pageName . ' page!" class="' . $class . '" href="' . $url . '">' . icon('external-link') . " " . $pageName . '</a>';
+  $icon = icon('external-link');
+  $link = '<a title="Mockup of the ' . $pageName . ' page!" class="' . $class . '" href="' . $url . '">' . $icon . " " . $pageName . '</a>';
   return $link;
 }
 
