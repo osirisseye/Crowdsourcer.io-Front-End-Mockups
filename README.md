@@ -12,7 +12,7 @@ You have to have XAMPP/APACHE or some other PHP server to view this repo. If you
 Start by looking through the pages and pick a starting point. Copy and rename the file to something detailed. (eg. 'conributions-list-mockup'). And add numbers if there is already a mockup of that type.
 
 ## Naming Things
-Let's follow some basic naming conventions. Pay attention to '-' and '_'. Use underscores to separate different words 'eg. task-detail'. Use dashes to separate different parts of a name. 'eg template-task_detail'. Doing this will allow me to organize these via a script later :D.
+Let's follow some basic naming conventions. Pay attention to "-" and "" Use underscores to separate different words 'eg. task-detail'. Use dashes to separate different parts of a name. 'eg template-task_detail'. Doing this will allow me to organize these via a script later :D.
 
 | Type          | How To Name                | Second Header                                   |
 | ------------- | -------------------------- | ----------------------------------------------- |
@@ -30,7 +30,7 @@ If you asking 'why do I have to do it' then the simple answer is to setup your l
 ### For Junior PHP users
 3. In the installation directory you will find folder 'htdocs'.
 4. Clone/download 'Crowdsourcer.io-Front-End-Mockups' repository.
-5. Copy the repo folder into 'htdocs' directory of Xampp (default is C:\XAMPP if you just clicked your way through installation).
+5. Copy the repo folder into 'htdocs' directory of XAMPP (default is C:\XAMPP if you just clicked your way through installation).
 
 ### For Advance PHP users
 3. Tutorial on setting up virtual hosts to come soon.
@@ -49,9 +49,8 @@ Let's view our repo.
 
 ## Viewing the repo.
 1. To see a php file you have to navigate to it - using address bar of your browser.
-2. Type 'http://localhost/*/', where * is the name of the folder you pasted the repository into.
+2. Type 'http://localhost/{{folder-name}}', where {{folder-name}} is the name of the folder you pasted the repository into.
    (I pasted 'Crowdsourcer.io-Front-End-Mockups' repository into a new folder 'crowd' in 'htdocs' so for me it is
    'http://localhost/crowd/' )
 3. You should now see a big Hello World in h1 and instructions on how to use the downloaded repo.
 4. Get busy reading... and welcome.
-

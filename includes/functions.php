@@ -44,7 +44,7 @@ function getDisplayName($name){
 }
 
 function icon($name){
-  return '<i class="fa fa-"' . $name . '" aria-hidden="true"></i>';
+  return '<i class="fa fa-' . $name . '" aria-hidden="true"></i>';
 }
 
 function getLink($url, $pageName, $class = ''){
