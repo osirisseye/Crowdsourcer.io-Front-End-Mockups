@@ -1,11 +1,11 @@
-<? $is_mission_control ? include("ignore_mctrl_bottom.php") : ""?>
-
+<? $is_mission_control ? include("mission_control_bottom.php") : ""?>
+</div>
 <div class="clearboth"></div>
 
 </div>
     <!-- /.container -->
 <? if (!isset($hide_footer) || (isset($hide_footer) && $hide_footer === false)) :?>
-    <? 
+    <?
         $copyright = 'Copyright &copy; Crowdsourcer.io ' . date('Y');
         $footer_navigation_links = '<a href="/">Home</a><strong> · </strong><a href="/about">About</a><strong> · </strong><a href="/nucleus">Nucleus</a><strong> · </strong><a href="/contact-us">Contact</a> · </strong><a href="/terms">Terms</a><strong> · </strong><a href="/attribution">Attribution</a><strong> · </strong><a target="_blank" href="http://feedback.userreport.com/665eef05-0ed3-4ee4-b275-65b8e522eb3f">Request a Feature</a>';
      ?>
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="<? echo($is_mission_control == true ? 'col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2' : 'col-lg-12'); ?> text-center">
                         <p class="links nvmarg voffset"><?=$footer_navigation_links?></p>
-                        <p class="nvoffset nvmarg"><?=$copyright?></p>                        
+                        <p class="nvoffset nvmarg"><?=$copyright?></p>
                     </div>
                 </div>
             </div>
