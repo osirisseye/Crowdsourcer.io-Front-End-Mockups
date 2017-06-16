@@ -88,19 +88,19 @@
                         </div>
                         <div class="even_gutter col-md-6 col-sm-12">
                             <div class="alert alert-warning alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">Ã—</span></button>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <strong>Warning!</strong> Better check yourself, you're not looking too good.
                             </div>
                         </div>
                         <div class="even_gutter col-md-6 col-sm-12">
                             <div class="alert alert-danger  alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">Ã—</span></button>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <strong>Oh snap!</strong> Change a few things up and try submitting again.
                             </div>
                         </div>
                         <div class="even_gutter col-md-6 col-sm-12">
                             <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">Ã—</span></button>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <h4 id="oh-snap!-you-got-an-error!">Oh snap! You got an error!<a class="anchorjs-link" href="#oh-snap!-you-got-an-error!"><span class="anchorjs-icon"></span></a></h4>
                                 <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor
                                     ligula, eget lacinia odio sem nec elit.</p>
