@@ -44,6 +44,8 @@ Now you should have all the documents in the right place - we will start XAMPP.
   * Note: If you are on windows, Disable UAC restrictions in the control panel. And also, run the control panel in Administrator Mode. In admin mode, you can install both MySQL and Apache as a service, meaning you no longer have to start them.
 4. Start your web browser and type in the address bar "http://localhost".
 5. If you see official website of XAMPP - you're good to go.
+*6. To check version of your php go to: http://localhost/dashboard/phpinfo.php (varsion 6+? you are good).
+
 
 Let's view our repo.
 
