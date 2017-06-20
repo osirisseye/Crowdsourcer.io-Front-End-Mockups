@@ -71,9 +71,21 @@ require("./includes/full_page_header.php");
     </ul>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <h2>Uploaded Files</h2>
+    <h2>Helper Pages</h2>
     <ul id="DirectoryList" class="nav nav-pills nav-stacked">
       <?php printDirectoriesAsList(dirname(__FILE__)) ?>
+    </ul>
+    <h2>Templates</h2>
+    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+      <?php printDirectoriesAsList(dirname(__FILE__)."/_templates") ?>
+    </ul>
+    <h2>Tasks</h2>
+    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+      <?php printDirectoriesAsList(dirname(__FILE__)."/_tasks") ?>
+    </ul>
+    <h2>Mockups</h2>
+    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+      <?php printDirectoriesAsList(dirname(__FILE__)."/_mockups") ?>
     </ul>
   </div>
 </div>

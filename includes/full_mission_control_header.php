@@ -9,6 +9,6 @@ $page = $page ?? "dashboard";
 $loggedin = $loggedin ?? true;
 $is_creator = $is_creator ?? true;
 
-include("./includes/functions.php");
-include("./partials/header.php");
+include($_SERVER['DOCUMENT_ROOT']."/includes/functions.php");
+include($_SERVER['DOCUMENT_ROOT']."/partials/header.php");
 ?>

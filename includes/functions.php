@@ -1,4 +1,8 @@
 <?php
+
+$TEMP = explode("/", $_SERVER["DOCUMENT_ROOT"]);
+$ROOT = $TEMP[count($TEMP) - 1];
+
 function printDirectories($path = "./", $class = ''){
   $directories = scandir($path);
   foreach ($directories as $directory) {
@@ -14,33 +18,44 @@ function printDirectoriesAsList($path = "./", $class = ''){
   $directories = scandir($path);
   foreach ($directories as $directory) {
     if($directory == "." || $directory == "..") continue;
-    $dir = getDirectoryInfo($directory);
+    $dir = getDirectoryInfo($directory, $path);
     if($dir['ext'] == "php" && $dir['name'] != "index"){
       echo getListItem($dir['url'], $dir['displayName'], $class);
     }
   }
 }
 
-function getDirectoryInfo($directory){
+function getDirectoryInfo($directory, $path = "./"){
   $parts = explode(".",  $directory);
   $name = $parts[0];
   $ext = count($parts) > 1 ? $parts[1] : "";
   $displayName = getDisplayName($name);
+  
+  $url = "";
+  global $ROOT;
+  
+  if($path != "./" && strpos($path, $ROOT) !== false){
+    $relative_path = explode($ROOT, $path)[1];
+    $url = $relative_path . "/" . $name . "." . $ext;
+  }
 
   return array(
     "displayName" => $displayName,
     "name" => $name,
     "ext" => $ext,
-    "url" => '/' . $name . "." . $ext
+    "url" => $url
   );
 }
 
 function getDisplayName($name){
-  $parts = preg_split("/[-_]/", $name);
-  for($i = 0; $i < count($parts); $i++){
-    $parts[$i] = ucfirst($parts[$i]);
+  $parts = preg_split("/[-]/", $name);
+  if(count($parts) > 1) $parts = array_splice($parts, 1);
+    
+  $words = preg_split("/[_]/", join("", $parts));
+  for($i = 0; $i < count($words); $i++){
+    $words[$i] = ucfirst($words[$i]);
   }
-  return join(" ", $parts);
+  return join(" ", $words);
 }
 
 function icon($name){

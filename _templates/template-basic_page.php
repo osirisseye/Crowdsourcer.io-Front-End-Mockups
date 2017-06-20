@@ -3,7 +3,7 @@
     // $loggedin = true;
 
     // Leave this in, loads all state and style.
-    include("./includes/full_page_header.php");
+    include($_SERVER['DOCUMENT_ROOT']."/includes/full_page_header.php");
 
     // Custom PHP goes here...
 ?>
@@ -147,4 +147,4 @@
     </div>
 </div>
 <br/>
-<? include("./partials/footer.php"); ?>
+<?php include($_SERVER['DOCUMENT_ROOT']."/partials/footer.php"); ?>
