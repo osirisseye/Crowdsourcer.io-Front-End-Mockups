@@ -8,7 +8,4 @@ $page = $page ?? "dashboard";
 // User Variables ignore
 $loggedin = $loggedin ?? true;
 $is_creator = $is_creator ?? true;
-
-include($_SERVER['DOCUMENT_ROOT']."/includes/functions.php");
-include($_SERVER['DOCUMENT_ROOT']."/partials/header.php");
 ?>

@@ -1,4 +1,4 @@
-<? $is_mission_control ? include($_SERVER['DOCUMENT_ROOT']."/partials/mission_control_bottom.php") : ""?>
+<? $is_mission_control ? require_once("../partials/mission_control_bottom.php") : ""?>
 </div>
 <div class="clearboth"></div>
 
@@ -52,7 +52,7 @@
     <?endif;?>
 
 <? endif; ?>
-            <script src="/assets/js/bootstrap.min.js"></script>
+            <script src="../assets/js/bootstrap.min.js"></script>
             <script type="text/javascript">
                 $(function () {
                     $('[data-toggle="popover"]').popover()

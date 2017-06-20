@@ -3,7 +3,11 @@
     // $loggedin = true;
     
     // Leave this in, loads all state and style.
-    include($_SERVER['DOCUMENT_ROOT']."/includes/full_mission_control_header.php");
+
+    require_once("../includes/functions.php");
+    require_once("../includes/mission_control_config.php");
+    require_once("../partials/header.php");
+    require_once("../partials/mission_control_top.php");
 
     // Custom PHP goes here...
 ?>
@@ -179,4 +183,4 @@
   <!--  End List  -->
 </div>
 
-<? include($_SERVER['DOCUMENT_ROOT']."/partials/footer.php"); ?>
+<? require_once("../partials/footer.php"); ?>

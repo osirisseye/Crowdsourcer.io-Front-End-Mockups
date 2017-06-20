@@ -1,10 +1,12 @@
-
 <?php
 /* ###############################
   DO NOT EDIT THIS PAGE :D
   - If you need a page to copy, pick anything with a 'template-' prefix.
 ################################ */
-require("./includes/full_page_header.php");
+
+require_once("./includes/functions.php");
+require_once("./includes/page_config.php");
+require_once("./partials/header.php");
 
 // Custom PHP goes here...
 
@@ -17,7 +19,10 @@ require("./includes/full_page_header.php");
   #DirectoryList {
     display: flex;
     flex-direction: column;
-}
+  }
+  #SidebarMenu {
+    margin-top: 30px;
+  }
 </style>
 
 <div class="container">
@@ -71,23 +76,95 @@ require("./includes/full_page_header.php");
     </ul>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <h2>Helper Pages</h2>
-    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-      <?php printDirectoriesAsList(dirname(__FILE__)) ?>
-    </ul>
-    <h2>Templates</h2>
-    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-      <?php printDirectoriesAsList(dirname(__FILE__)."/_templates") ?>
-    </ul>
-    <h2>Tasks</h2>
-    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-      <?php printDirectoriesAsList(dirname(__FILE__)."/_tasks") ?>
-    </ul>
-    <h2>Mockups</h2>
-    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-      <?php printDirectoriesAsList(dirname(__FILE__)."/_mockups") ?>
-    </ul>
+    
+    <div id="SidebarMenu" class="panel-group" role="tablist" aria-multiselectable="false">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#SidebarMenu" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Project Documents
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <p>Documents specific to Crowdsourcer.io</p>
+            <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+              <?php printDirectoriesAsList($_SERVER["DOCUMENT_ROOT"] . "/_docs") ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#SidebarMenu" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Tutorials
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <p>Tutorials on XAMPP, php, git, and more. <p>
+            <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+              <?php printDirectoriesAsList($_SERVER["DOCUMENT_ROOT"] . "/_tutorials") ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#SidebarMenu" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Templates
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <p>Template documents for you to use as a staring point.</p>
+            <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+              <?php printDirectoriesAsList($_SERVER["DOCUMENT_ROOT"] . "/_templates") ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#SidebarMenu" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Tasks
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+            <p>Proposals for tasks. Please use version numbers to keep organized, and not lose data.</p>
+            <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+              <?php printDirectoriesAsList($_SERVER["DOCUMENT_ROOT"] . "/_tasks") ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFive">
+          <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#SidebarMenu" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+              Mockups
+            </a>
+          </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="panel-body">
+            <p>Random mockups, put anything you want to show the team in here at any time.</p>
+            <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+              <?php printDirectoriesAsList($_SERVER["DOCUMENT_ROOT"] . "/_mockups") ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<?php include("./partials/footer.php"); ?>
+<?php require_once("./partials/footer.php"); ?>
