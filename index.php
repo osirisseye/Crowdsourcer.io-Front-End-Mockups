@@ -38,18 +38,24 @@ for($i = 0; $i < count($config) - 1; $i++){
   .spacer {
     margin-top: 30px;
   }
+  .alert {
+    margin: 0px;
+    margin-top: 30px;
+  }
 </style>
 
 <div class="container">
-  <div class="spacer"></div>
   <div class="row">
     <div class="col-xs-12">
-      <div class="alert alert-success" role="alert">
-        <p>
-          <strong>Current Respository: </strong><a href="<?php echo $repositoryUrl; ?>"><?php echo $repositoryUrl; ?></a><br/>
-          <strong>Current Branch: </strong><?php echo $branch; ?>
-        </p>
-      </div>
+      <?php if($repositoryUrl && $branch){ ?>
+        <div class="alert alert-success" role="alert">
+          <p>
+            <strong>Current Respository: </strong><a href="<?php echo $repositoryUrl; ?>"><?php echo $repositoryUrl; ?></a><br/>
+            <strong>Current Branch: </strong><?php echo $branch; ?>
+          </p>
+        </div>
+      <?php } ?>
+      
     </div>
     <div class="col-xs-12 col-sm-8">
       <h1>Hello World</h1>
@@ -196,6 +202,7 @@ for($i = 0; $i < count($config) - 1; $i++){
       </div>
     </div>
   </div>
+  <div class="spacer"></div>
 </div>
 
 <?php require_once("./partials/footer.php"); ?>
