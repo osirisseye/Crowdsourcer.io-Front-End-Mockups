@@ -1,18 +1,50 @@
-<? include("templates/header.php"); ?>
+<?php echo $_SERVER["DOCUMENT_ROOT"];
+/* ###############################
+  DO NOT EDIT THIS PAGE :D
+  - If you need a page to copy, pick anything with a 'template-' prefix. */
+require("./includes/full_page_header.php");
+// Custom PHP goes here...
+?>
 
-<h1>Hello World</h1>
+<style>
+  #NamingTable td:nth-child(2){
+    min-width: 200px;
+  }
+  #DirectoryList {
+    display: flex;
+    flex-direction: column;
+  }
 
-<p>You can use these templates pages to build entirely new pages. More functionality will be coming so that you can integrate even better with the front end of the site.</p>
+  
+</style>
 
-<p>I appreciate I've not given detailed instructions on setting this up, but there are only two components. Setting up the PHP and setting up the SCSS. For the PHP your simply downloading an application that can create a small virtual server on your computer (MAMP is great for Mac); and for SCSS you just need an app that can convert the SCSS to CSS and place it in the assets/css/ directory. Scout app is great for this.</p>
+<div class="container">
+  	<!--  BEGIN PROGRESS BAR  -->
+<?php include("_mockup-task_viewer_progress_bar.php"); ?>
+<!--  END PROGRESS BAR  -->
 
-<p>Some tips:</p>
-<ul>
-   <li>Familiarise yourself with the existing classes. Look at other pages on the live site, inspect elements to see how things are currently laid out.</li> 
-   <li>Absolutely try to avoid editing the raw CSS, instead only ever edit the SCSS files (Scout app is a good tool to auto generate CSS from SCSS).</li>
-   <li>Some CSS classes aren't in the SCSS as I'm still mid migration, if you want to make changes to these, move everything related to that class over to the appropriate SCSS file (make a new one if necessary) and remove it from the CSS files. This will help me so much with migration.</li>
-   <li>You can change some parameters to test out different functionality from the tops of the header and footer files.</li>
-   <li>To create an entirely new page create a file such as "my-page.php" and include the header and footer in the index. Then simply navigate to it in your browser.</li>
-</ul>
+<!--FOR OPTIMAL RESULTS DISABLE THIS: 
+.container2 {
+	display: flex;
+	flex-direction:row;
+	flex-wrap: nowrap;
+  }
+-->
+<div class="container2">
+<!--  BEGIN TITLE CARDS EXAMPLE  -->
+<?php include("_mockup-task_viewer_title_card-3.php"); ?>
+<!--  END TITLE CARDS EXAMPLE  -->
+<!-- BEGIN CONTRIBUTOR CARD EXAMPLE 
+<?php include("_mockup-task_viewer_contributor_card-.php"); ?>
+ END CONTRIBUTOR CARD EXCAMPLE -->
+</div>
 
-<? include("templates/footer.php"); ?>
+  <div class="col-xs-12 col-sm-4">
+    <h2>Uploaded Files</h2>
+    <ul id="DirectoryList" class="nav nav-pills nav-stacked">
+      <?php printDirectoriesAsList(dirname(__FILE__)) ?>
+    </ul>
+  </div>
+</div>
+
+<?php include("./partials/footer.php"); ?>
