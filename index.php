@@ -66,7 +66,7 @@ for($i = 0; $i < count($config) - 1; $i++){
 
       <h2>Where to start?</h2>
 
-      <p>Start by looking through the pages and pick a starting point. <strong><u>Copy and rename</u></strong> the file to something detailed. (eg. 'conributions-list-mockup'). And add numbers if there is already a mockup of that type.</p>
+      <p>Start by looking through the pages and pick a starting point. <strong><u>Copy and rename</u></strong> the file to something detailed. (eg. 'mockup-contributions_list') and add the the appropriate folder. You can add version numbers if there is already a mockup of that type.</p>
 
       <h2>Naming things.</h2>
       <p>Let's follow some basic naming conventions. Pay attention to '-' and '_'. Use underscores to separate different words 'eg. task-detail'. Use dashes to separate different parts of a name. 'eg template-task_detail'. Doing this will allow me to organize these via a script later :D.</p>
