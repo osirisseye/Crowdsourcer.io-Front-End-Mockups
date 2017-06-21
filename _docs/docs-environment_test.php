@@ -15,7 +15,7 @@
     $parts = explode(".", $version);
 
     if($parts[0] >= 7 && $parts[1] >= 1 && $parts[2] >= 3){
-      $displayVersion .= "<p>Your php version is <span class='valid'>" . $version . "</span><br/>PHP version is <span class='valid'>valid</span>.</p></p>";
+      $displayVersion .= "<p>Your php version is <span class='valid'>" . $version . "</span><br/>PHP version is <span class='valid'>okay</span>.</p></p>";
     } else {
       $displayVersion .= "<p>Your php version is <span class='invalid'>" . $version . "</span><br/>Minimum version required is <span class='invalid'>7.1.0</span></p>";
       $displayVersion .= "<p>Make sure to download XAMPP with PHP 7.1.4 or higher. <a href='https://www.apachefriends.org/download.html'>Download XAMPP</a>";

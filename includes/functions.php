@@ -25,7 +25,7 @@ function printDirectoriesAsList($path = "./", $class = ''){
   }
 }
 
-function getDirectoryInfo($directory, $path = "./"){
+function getDirectoryInfo($directory, $path = ""){
   $parts = explode(".",  $directory);
   $name = $parts[0];
   $ext = count($parts) > 1 ? $parts[1] : "";
@@ -34,9 +34,11 @@ function getDirectoryInfo($directory, $path = "./"){
   $url = "";
   global $ROOT;
   
-  if($path != "./" && strpos($path, $ROOT) !== false){
+  if($path != "" && strpos($path, $ROOT) !== false){
     $relative_path = explode($ROOT, $path)[1];
     $url = $relative_path . "/" . $name . "." . $ext;
+  } else {
+    $url = $path  . "/" . $name . "." . $ext;
   }
 
   return array(
