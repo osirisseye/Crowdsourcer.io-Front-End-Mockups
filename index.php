@@ -23,7 +23,7 @@ require("./includes/full_page_header.php");
 <?php include("_mockup-task_viewer_progress_bar.php"); ?>
 <!--  END PROGRESS BAR  -->
 
-<!--FOR OPTIMAL RESULTS DISABLE THIS: 
+<!--UNCOMMENT AND PASTE IN THE STYLE SECTION FOR 3-PART VIEW: 
 .container2 {
 	display: flex;
 	flex-direction:row;
@@ -32,10 +32,11 @@ require("./includes/full_page_header.php");
 -->
 <div class="container2">
 <!--  BEGIN TITLE CARDS EXAMPLE  -->
-<?php include("_mockup-task_viewer_title_card-3.php"); ?>
+<?php include("_mockup-task_viewer_title_card-1.php"); ?>
 <!--  END TITLE CARDS EXAMPLE  -->
-<!-- BEGIN CONTRIBUTOR CARD EXAMPLE 
-<?php include("_mockup-task_viewer_contributor_card-.php"); ?>
+	
+<!-- BEGIN CONTRIBUTOR CARD EXAMPLE - UNCOMMENT FOR 3-PART VIEW
+<?php include("_mockup-task_viewer_contributor_card-1.php"); ?>
  END CONTRIBUTOR CARD EXCAMPLE -->
 </div>
 
