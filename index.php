@@ -35,7 +35,7 @@ for($i = 0; $i < count($config) - 1; $i++){
 
 $mainRepo = 'https://github.com/MikeDaniel18/Crowdsourcer.io-Front-End-Mockups.git';
 $isMaster = $branch == 'MASTER';
-$isMainRepo = $repositoryUrl = $mainRepo;
+$isMainRepo = $repositoryUrl == $mainRepo;
 
 ?>
 
