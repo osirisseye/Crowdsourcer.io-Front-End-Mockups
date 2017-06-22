@@ -1,4 +1,4 @@
-<? $priority = "high"; ?>
+<? $priority = "low"; ?>
 <? $status = ""; ?>
 <!-- BEGIN Priority of the task -->
 <? if($priority == "low") {
@@ -41,12 +41,12 @@ h1 {
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: #f7f7f7;
     cursor: default;
-    background-color: #e74c3c;
-    border: 1px solid #fadbd8;
+    background-color: <?= $headerColor ?>;
+    border: 1px solid <?= $bodyColor ?>;
     border-bottom-color: transparent;
 }
 .nav-tabs>li>a:hover {
-    border-color: #fadbd8 #fadbd8 #fadbd8;
+    border-color: <?= $headerColor ?> <?= $headerColor ?> <?= $headerColor ?>;
 }
 .nav-tabs>li>a {
     margin-right: 2px;
@@ -57,7 +57,7 @@ h1 {
 }
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
-    background-color: #e74c3c;
+    background-color: <?= $headerColor ?>;
     color: white;
 }
 .card {
