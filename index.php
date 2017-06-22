@@ -14,6 +14,11 @@ require("./includes/full_page_header.php");
     display: flex;
     flex-direction: column;
   }
+  .container2 {
+  	display: flex;
+  	flex-direction:row;
+  	flex-wrap: nowrap;
+  }
 
 
 </style>
@@ -24,21 +29,14 @@ require("./includes/full_page_header.php");
 <? include("_mockup-task_viewer_progress_bar.php"); ?>
 <!--  END PROGRESS BAR  -->
 
-<!--UNCOMMENT AND PASTE IN THE STYLE SECTION FOR 3-PART VIEW:
-.container2 {
-	display: flex;
-	flex-direction:row;
-	flex-wrap: nowrap;
-  }
--->
 
 <div class="container2">
   <!--  BEGIN TITLE CARDS EXAMPLE  -->
-  <? include("_mockup-task_viewer_title_card-1.php"); ?>
+  <? include("_mockup-task_viewer_title_card-3.php"); ?>
   <!--  END TITLE CARDS EXAMPLE  -->
 
   <!-- BEGIN CONTRIBUTOR CARD EXAMPLE - UNCOMMENT FOR 3-PART VIEW -->
-  <?// include("_mockup-task_viewer_contributor_card-2.php"); ?>
+  <? include("_mockup-task_viewer_contributor_card-2.php"); ?>
   <!-- END CONTRIBUTOR CARD EXCAMPLE -->
 </div>
 

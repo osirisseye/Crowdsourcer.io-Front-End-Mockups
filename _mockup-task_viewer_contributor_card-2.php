@@ -6,11 +6,13 @@ h1 {
 }
 #contr-list {
   max-width:350px;
-
+  position: absolute;
+  right: 400px;
 }
-.card {
+.contributorsContainer {
+  width: 100%;
   min-height: 200px;
-  background-color: rgb(75, 0, 130);
+  background-color: #5C4ED4;
   padding: 30px;
   box-shadow: 3px 3px 2px #c8d1d3;
 }
@@ -50,7 +52,7 @@ hr {
 
 <!--  Priority of the task -->
 
-<div class="card col-xs-12 col-sm-4" id="contr-list">
+<div class="contributorsContainer col-xs-12 col-sm-4" id="contr-list">
   <span class="contributors_title">Contributors</span>
   <div class="contr-card">
       <? include("ui_blocks/_user_profile1.php") ?>

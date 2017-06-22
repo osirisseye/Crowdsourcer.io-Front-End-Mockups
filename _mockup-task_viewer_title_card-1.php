@@ -74,6 +74,9 @@ h1 {
   margin-right: -50px;
   margin-bottom: -50px;
 }
+.nav-tabs {
+    margin-bottom: -9px !important;
+}
 </style>
 
 
