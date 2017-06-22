@@ -73,7 +73,7 @@ $isMainRepo = $repositoryUrl == $mainRepo;
             <strong>Current Respository: </strong><a href="<?php echo $repositoryUrl; ?>"><?php echo $repositoryUrl; ?></a><br/>
             <strong>Current Branch: </strong><?php echo $branch; ?>
           </p>
-          <?php if(!$isMainRepo) { ?><p>This repo is (hopefully) a fork of '<?php echo $mainRepo; ?>'.</p><?php } ?>
+          <?php if(!$isMainRepo) { ?><p>This repo is (hopefully) a fork of '<a href='<?php echo $mainRepo; ?>'><?php echo $mainRepo; ?></a>'.</p><?php } ?>
           <?php if(!$isMaster) { ?><p>You are <strong>NOT</strong> on the <strong>MASTER</strong> branch.</p><?php } ?>
           <?php if($isMainRepo && $isMaster) { ?><p>Make sure you are not on the <strong>MASTER</strong> branch. Please do your edits on a fork or a new branch.</p><?php } ?>
         </div>
