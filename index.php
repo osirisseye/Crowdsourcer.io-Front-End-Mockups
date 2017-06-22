@@ -14,30 +14,30 @@ require("./includes/full_page_header.php");
     display: flex;
     flex-direction: column;
   }
+  .container2 {
+  	display: flex;
+  	flex-direction:row;
+  	flex-wrap: nowrap;
+  }
 
-  
+
 </style>
 
 <div class="container">
-  	<!--  BEGIN PROGRESS BAR  -->
-<?php include("_mockup-task_viewer_progress_bar.php"); ?>
+
+<!--  BEGIN PROGRESS BAR  -->
+<? include("_mockup-task_viewer_progress_bar.php"); ?>
 <!--  END PROGRESS BAR  -->
 
-<!--UNCOMMENT AND PASTE IN THE STYLE SECTION FOR 3-PART VIEW: 
-.container2 {
-	display: flex;
-	flex-direction:row;
-	flex-wrap: nowrap;
-  }
--->
+
 <div class="container2">
-<!--  BEGIN TITLE CARDS EXAMPLE  -->
-<?php include("_mockup-task_viewer_title_card-1.php"); ?>
-<!--  END TITLE CARDS EXAMPLE  -->
-	
-<!-- BEGIN CONTRIBUTOR CARD EXAMPLE - UNCOMMENT FOR 3-PART VIEW
-<?php include("_mockup-task_viewer_contributor_card-1.php"); ?>
- END CONTRIBUTOR CARD EXCAMPLE -->
+  <!--  BEGIN TITLE CARDS EXAMPLE  -->
+  <? include("_mockup-task_viewer_title_card-3.php"); ?>
+  <!--  END TITLE CARDS EXAMPLE  -->
+
+  <!-- BEGIN CONTRIBUTOR CARD EXAMPLE - UNCOMMENT FOR 3-PART VIEW -->
+  <? include("_mockup-task_viewer_contributor_card-2.php"); ?>
+  <!-- END CONTRIBUTOR CARD EXCAMPLE -->
 </div>
 
   <div class="col-xs-12 col-sm-4">

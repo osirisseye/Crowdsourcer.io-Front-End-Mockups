@@ -1,41 +1,18 @@
 <? $priority = "high"; ?>
 <? $status = ""; ?>
-
-<style>
-h1 {
-  text-align: center;
-}
-
-
-.card {
-  min-height: 250px;
-  padding: 50px;
-  box-shadow: 3px 3px 2px #c8d1d3;
-  width:100% !important;
-}
-#lowPriorityCard {
-  border: 5px solid transparent;
-	border-image: repeating-linear-gradient(20deg, #29c75f, #1e923c 10px, #136527 10px, #469850 20px );
-	border-image-slice: 1;
-}
-#normalPriorityCard {
-  border: 5px solid transparent;
-  border-image: repeating-linear-gradient(20deg, #FFBC11, #ffb700 10px, #fff300 10px, #fbff00 20px );
-  border-image-slice: 1;
-}
-#highPriorityCard {
-  border: 5px solid transparent;
-  border-image: repeating-linear-gradient(20deg, #E74C3C, #ff3d29 10px, #cc0000 10px, #7d0000 20px );
-  border-image-slice: 1;
-}
-</style>
 <!-- BEGIN Priority of the task -->
 <? if($priority == "low") {
     $priorityCardId = "lowPriorityCard";
+    $headerColor = 'rgba(41, 199, 95, .75)';
+    $bodyColor = 'rgba(41, 199, 95, .20)';
   } elseif($priority == "normal") {
     $priorityCardId = "normalPriorityCard";
+    $headerColor = 'rgba(255, 188, 17, .75)';
+    $bodyColor = 'rgba(255, 188, 17, .20)';
   } else {
     $priorityCardId = "highPriorityCard";
+    $headerColor = 'rgba(231, 76, 60, .75)';
+    $bodyColor = 'rgba(231, 76, 60, .20)';
   }
 ?>
 <!--  END OF Priority of the task -->
@@ -52,19 +29,91 @@ h1 {
   }
 ?>
 <!-- END Status of the task -->
+
+<style>
+h1 {
+  text-align: center;
+}
+.nav-tabs {
+    margin-bottom: -9px !important;
+    border-bottom: 0px !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #f7f7f7;
+    cursor: default;
+    background-color: <?= $headerColor ?>;
+    border: 1px solid <?= $bodyColor ?>;
+    border-bottom-color: transparent;
+}
+.nav-tabs>li>a:hover {
+    border-color: <?= $headerColor ?> <?= $headerColor ?> <?= $headerColor ?>;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: white;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: <?= $headerColor ?>;
+    color: white;
+}
+.card {
+  min-height: 350px;
+  max-width: 760px;
+  padding: 50px;
+  box-shadow: 3px 3px 2px #c8d1d3;
+}
+#lowPriorityCard {
+  background-color: <?= $bodyColor ?>;
+  border: 5px solid transparent;
+  border-color: #29c75f;
+  border-image-slice: 1;
+}
+#normalPriorityCard {
+  background-color: <?= $bodyColor ?>;
+  border: 5px solid transparent;
+  border-color: #FFBC11;
+  border-image-slice: 1;
+}
+#highPriorityCard {
+  background-color: <?= $bodyColor ?>;
+  border: 5px solid transparent;
+  border-color: #E74C3C;
+  border-image-slice: 1;
+}
+#titleCardHeader{
+  background-color: <?= $headerColor ?>;
+  color: white;
+  /* width: 100%; */
+  padding: 10px;
+  margin-top: -50px;
+  margin-left: -50px;
+  padding-left: 50px;
+  margin-right: -50px;
+  padding-right: 50px;
+}
+#titleCardBody{
+  margin-left: -50px;
+  padding: 25px;
+  margin-right: -50px;
+  margin-bottom: -50px;
+}
+</style>
 <div id="container">
   <div class="card" id=<?=$priorityCardId?>>
+    <div id="titleCardHeader">
     <h1>SAMPLE TITLE</h1>
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#sectionA">Description</a></li>
-            <li><a data-toggle="tab" href="#sectionB">Completion notes</a></li>
-            <li><a data-toggle="tab" href="#sectionC">Approval</a></li>
-            <li><a data-toggle="tab" href="#sectionD">Contributors</a></li>
-          </ul>
-
-
-
-    
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#sectionA">Description</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Completion notes</a></li>
+        <li><a data-toggle="tab" href="#sectionC">Approval</a></li>
+        <li><a data-toggle="tab" href="#sectionD">Contributors</a></li>
+      </ul>
+    </div>
+  <div id="titleCardBody">
     <div class="tab-content">
       <div id="sectionA" class="tab-pane fade in active">
         <h3>SAMPLE TASK DESCRIPTION</h3>
@@ -89,19 +138,15 @@ h1 {
 
       <div id="sectionD" class="tab-pane fade">
         <h3>SAMPLE CONTRIBUTORS TAB</h3>
-          
             <div>A's avatar</div>
             <div>
                  <h5>@AlanAlan</h5>
                  <h5>Junior HTML/CSS Dev</h5>
             </div>
-
-          
-
       </div>
-
     </div>
-    
-      
+    </div>
+
+
   </div>
 </div>
