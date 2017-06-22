@@ -1,5 +1,4 @@
 <? if ($is_mission_control):?>
-
     <script src="./assets/js/glyphs.js"></script>
         <div class="container-fluid dashboard_container">
             <div class="row nvoffset vmarg-sm">
