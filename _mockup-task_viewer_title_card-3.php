@@ -15,17 +15,17 @@ h1 {
 }
 #lowPriorityCard {
   border: 5px solid transparent;
-	border-image: repeating-linear-gradient(20deg, #29c75f, #1e923c 10px, #136527 10px, #469850 20px );
-	border-image-slice: 1;
+  border-color: #29c75f;
+  border-image-slice: 1;
 }
 #normalPriorityCard {
   border: 5px solid transparent;
-  border-image: repeating-linear-gradient(20deg, #FFBC11, #ffb700 10px, #fff300 10px, #fbff00 20px );
+  border-color: #FFBC11;
   border-image-slice: 1;
 }
 #highPriorityCard {
   border: 5px solid transparent;
-  border-image: repeating-linear-gradient(20deg, #E74C3C, #ff3d29 10px, #cc0000 10px, #7d0000 20px );
+  border-color: #E74C3C;
   border-image-slice: 1;
 }
 </style>
@@ -64,7 +64,7 @@ h1 {
 
 
 
-    
+
     <div class="tab-content">
       <div id="sectionA" class="tab-pane fade in active">
         <h3>SAMPLE TASK DESCRIPTION</h3>
@@ -89,19 +89,19 @@ h1 {
 
       <div id="sectionD" class="tab-pane fade">
         <h3>SAMPLE CONTRIBUTORS TAB</h3>
-          
+
             <div>A's avatar</div>
             <div>
                  <h5>@AlanAlan</h5>
                  <h5>Junior HTML/CSS Dev</h5>
             </div>
 
-          
+
 
       </div>
 
     </div>
-    
-      
+
+
   </div>
 </div>
