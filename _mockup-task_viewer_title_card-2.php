@@ -5,12 +5,10 @@
 h1 {
   text-align: center;
 }
-
-
 .card {
   min-height: 250px;
   padding: 50px;
-  box-shadow: 3px 3px 2px #c8d1d3;
+  display: inline-flex;
 }
 #lowPriorityCard {
   border: 5px solid transparent;
@@ -56,15 +54,12 @@ h1 {
     <h1>SAMPLE TITLE</h1>
           <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#sectionA">Description</a></li>
-                    
+
             <li><a data-toggle="tab" href="#sectionB">Completion notes</a></li>
-                      
+
             <li><a data-toggle="tab" href="#sectionC">Approval</a></li>
           </ul>
 
-
-
-    
     <div class="tab-content">
       <div id="sectionA" class="tab-pane fade in active">
         <h3>SAMPLE TASK DESCRIPTION</h3>
@@ -87,16 +82,16 @@ h1 {
           <br>
       </div>
     </div>
-    
+
       What needs to be displayed:
-      
+
       <li>Position</li>
       <li>Under taker (B,R,C)</li>
       <li>Completion notes (R,C)</li>
       <li>Approval rating (R)</li>
       <br>
 
-    
-    
+
+
   </div>
 </div>
