@@ -23,4 +23,5 @@ Let's follow some basic naming conventions. Pay attention to "-" and "\_" Use un
 # Setting up your environment.
 
 [Help setting up XAMPP](docs/XAMPP.md)
-[Setting up a Virtual Host](docs/VHOST.md) *This is optional*
+
+[Setting up a Virtual Host](docs/VHOST.md) -- *This is optional*
