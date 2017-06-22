@@ -33,6 +33,10 @@ for($i = 0; $i < count($config) - 1; $i++){
   }
 }
 
+$mainRepo = 'https://github.com/MikeDaniel18/Crowdsourcer.io-Front-End-Mockups.git'
+$isMaster = $branch == 'MASTER';
+$isMainRepo = $repositoryUrl = $mainRepo;
+
 ?>
 
 <style>
@@ -64,12 +68,14 @@ for($i = 0; $i < count($config) - 1; $i++){
   <div class="row">
     <div class="col-xs-12">
       <?php if($repositoryUrl && $branch){ ?>
-        <div class="alert <?php echo $branch == 'MASTER' ? 'alert-danger' : 'alert-success' ?>" role="alert">
+        <div class="alert <?php echo $isMainRepo || $isMaster ==  ? 'alert-danger' : 'alert-success' ?>" role="alert">
           <p>
             <strong>Current Respository: </strong><a href="<?php echo $repositoryUrl; ?>"><?php echo $repositoryUrl; ?></a><br/>
             <strong>Current Branch: </strong><?php echo $branch; ?>
           </p>
-          <?php if($branch == 'MASTER') { ?><p>Make sure you are not on the master branch. Please do your edits on a fork or a new branch.</p><?php } ?>
+          <?php if(!$isMainRepo) { ?><p>This repo is (hopefully) a fork of '<?php echo $mainRepo; ?>'.</p><?php } ?>
+          <?php if(!$isMainRepo) { ?><p>You are <strong>NOT</strong> on the <strong>MASTER</strong> branch.</p><?php } ?>
+          <?php if($isMainRepo || $isMaster) { ?><p>Make sure you are not on the <strong>MASTER</strong> branch. Please do your edits on a fork or a new branch.</p><?php } ?>
         </div>
       <?php } ?>
       
