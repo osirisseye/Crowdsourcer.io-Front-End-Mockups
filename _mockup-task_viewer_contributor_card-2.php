@@ -6,8 +6,7 @@ h1 {
 }
 #contr-list {
   max-width:350px;
-  position: absolute;
-  right: 400px;
+  margin-left:10px;
 }
 .contributorsContainer {
   width: 100%;

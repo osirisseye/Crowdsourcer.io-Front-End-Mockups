@@ -1,4 +1,4 @@
-<? $priority = "low"; ?>
+<? $priority = "high"; ?>
 <? $status = ""; ?>
 <!-- BEGIN Priority of the task -->
 <? if($priority == "low") {
