@@ -4,6 +4,7 @@
 
     // Leave this in, loads all state and style.
 
+    require_once("../root.php");
     require_once("../includes/functions.php");
     require_once("../includes/page_config.php");
     require_once("../partials/header.php");
@@ -150,4 +151,4 @@
     </div>
 </div>
 <br/>
-<?php require_once($_SERVER['DOCUMENT_ROOT']."/partials/footer.php"); ?>
+<?php require_once("../partials/footer.php"); ?>

@@ -1,8 +1,5 @@
 <?php
 
-$TEMP = explode("/", $_SERVER["DOCUMENT_ROOT"]);
-$ROOT = $TEMP[count($TEMP) - 1];
-
 function printDirectories($path = "./", $class = ''){
   $directories = scandir($path);
   foreach ($directories as $directory) {
@@ -18,60 +15,97 @@ function printDirectoriesAsList($path = "./", $class = ''){
   $directories = scandir($path);
   foreach ($directories as $directory) {
     if($directory == "." || $directory == "..") continue;
-    $dir = getDirectoryInfo($directory, $path);
+    $dir = getDirectoryInfo($directory, $path);    
     if($dir['ext'] == "php" && $dir['name'] != "index"){
-      echo getListItem($dir['url'], $dir['displayName'], $class);
+      echo getListItem($dir['url'], $dir['displayName'], $class, $dir['user'], $dir['version']);
     }
   }
 }
 
-function getDirectoryInfo($directory, $path = ""){
+function getDirectoryInfo($directory, $path = "/"){
   $parts = explode(".",  $directory);
-  $name = $parts[0];
-  $ext = count($parts) > 1 ? $parts[1] : "";
+  $ext = count($parts) > 1 ? array_pop($parts) : "";
+  
+  $name = implode('.', $parts);
+  
   $displayName = getDisplayName($name);
-  
-  $url = "";
-  global $ROOT;
-  
-  if($path != "" && strpos($path, $ROOT) !== false){
-    $relative_path = explode($ROOT, $path)[1];
-    $url = $relative_path . "/" . $name . "." . $ext;
-  } else {
-    $url = $path  . "/" . $name . "." . $ext;
-  }
-
+  $user = getUserName($name);
+  $version = getVersion($name);
+    
+  $url = ROOT . "/" . $path . "/" . $name . "." . $ext;
+    
   return array(
     "displayName" => $displayName,
     "name" => $name,
     "ext" => $ext,
-    "url" => $url
+    "user" => $user,
+    "url" => $url,
+    "version" => $version
   );
 }
 
 function getDisplayName($name){
   $parts = preg_split("/[-]/", $name);
-  if(count($parts) > 1) $parts = array_splice($parts, 1);
-    
-  $words = preg_split("/[_]/", join("", $parts));
+  $count = count($parts);
+  
+  $displayName = $count > 1 ? $parts[1] : $parts[0];
+  
+  $words = preg_split("/[_]/", $displayName);
   for($i = 0; $i < count($words); $i++){
     $words[$i] = ucfirst($words[$i]);
   }
   return join(" ", $words);
 }
 
+function getUserName($name){
+  $parts = preg_split("/[-]/", $name);
+  $count = count($parts);
+  
+  if($count < 2 || $count > 3) return "";
+
+  if($count == 3){
+    return $parts[0];
+  } else {
+    if(strpos('v', $parts[$count - 1]) == 0){
+      return $parts[0];
+    } 
+  }
+
+  return '';
+}
+
+function getVersion($name){
+  $parts = preg_split("/[-]/", $name);
+  $count = count($parts);
+  
+  if($count < 2 || $count > 3) return "";
+
+  if($count == 3){      
+    return substr($parts[2], 1);
+  } else {
+    if(strpos($parts[$count - 1], 'v')){
+      return substr($parts[$count - 1], 1);
+    } 
+  }
+  return '';
+}
+
 function icon($name){
   return '<i class="fa fa-' . $name . '" aria-hidden="true"></i>';
 }
 
-function getLink($url, $pageName, $class = ''){
+function getLink($url, $pageName, $class = '', $user = '', $version = ''){
   $icon = icon('external-link');
-  $link = '<a title="Mockup of the ' . $pageName . ' page!" class="' . $class . '" href="' . $url . '">' . $icon . " " . $pageName . '</a>';
+  $userString = "";
+  $versionString = "";
+  if($user) $userString = "<br/><span class='username'>@" . $user . '</span>';
+  if($version) $versionString = " <span class='version'>version " . $version . '</span>';
+  $link = '<a title="Mockup of the ' . $pageName . ' page!" class="' . $class . '" href="' . $url . '">' . $icon . " " . $pageName  . $versionString . $userString . '</a>';
   return $link;
 }
 
-function getListItem($url, $pageName, $class = ''){
-  $item = '<li role="presentation">' . getLink($url, $pageName, $class) . '</li>';
+function getListItem($url, $pageName, $class = '', $user = '', $version = ''){
+  $item = '<li role="presentation">' . getLink($url, $pageName, $class, $user, $version) . '</li>';
   return $item;
 }
 

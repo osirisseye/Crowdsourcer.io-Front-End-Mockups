@@ -4,17 +4,17 @@
     <title>
         <? echo $title; ?> | Crowdsourcer.io
     </title>
-    <link href="../assets/fonts/stylesheet.css" rel="stylesheet">
-    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/main.css" rel="stylesheet">
-    <link href="../assets/css/new-main.css" rel="stylesheet">
-    <link href="../assets/css/notifications.css" rel="stylesheet">
-    <?= $is_mission_control ? '<link href="../assets/css/missioncontrol.css" rel="stylesheet">' : ""?>
-    <link href="../assets/css/colour-scheme.css" rel="stylesheet">
+    <link href="<?php echo ROOT ?>/assets/fonts/stylesheet.css" rel="stylesheet">
+    <link href="<?php echo ROOT ?>/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo ROOT ?>/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo ROOT ?>/assets/css/main.css" rel="stylesheet">
+    <link href="<?php echo ROOT ?>/assets/css/new-main.css" rel="stylesheet">
+    <link href="<?php echo ROOT ?>/assets/css/notifications.css" rel="stylesheet">
+    <?= $is_mission_control ? '<link href="' . ROOT . '/assets/css/missioncontrol.css" rel="stylesheet">' : ""?>
+    <link href="<?php echo ROOT ?>/assets/css/colour-scheme.css" rel="stylesheet">
 
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/n_m.js"></script>
+    <script src="<?php echo ROOT ?>/assets/js/jquery.min.js"></script>
+    <script src="<?php echo ROOT ?>/assets/js/n_m.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
@@ -47,7 +47,7 @@
                         <a href="">Learn</a>
                     </li>
                 </ul>
-                <div class="navbar-center"><a class="" href="/"><span class="icon-logo"></a></div>
+              <div class="navbar-center"><a class="" href="/"><span class="icon-logo"></span></a></div>
                 <ul class="nav navbar-nav navbar-right">
 
                     <?php if ($loggedin) : ?>

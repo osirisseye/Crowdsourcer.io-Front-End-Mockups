@@ -4,6 +4,7 @@
     
     // Leave this in, loads all state and style.
 
+    require_once("../root.php");
     require_once("../includes/functions.php");
     require_once("../includes/mission_control_config.php");
     require_once("../partials/header.php");

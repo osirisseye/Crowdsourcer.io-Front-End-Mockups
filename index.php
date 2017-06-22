@@ -4,16 +4,24 @@
   - If you need a page to copy, pick anything with a 'template-' prefix.
 ################################ */
 
-require_once("./includes/functions.php");
-require_once("./includes/page_config.php");
-require_once("./partials/header.php");
+require_once("root.php");
+require_once("includes/functions.php");
+require_once("includes/page_config.php");
+require_once("partials/header.php");
 
 // Custom PHP goes here...
+
+/* ##############################
+  This portion get's GIT INFO
+  - Branch & Repo URL.
+  
+  Only works locally
+############################## */
 
 $head = file('.git/HEAD', FILE_USE_INCLUDE_PATH);
 $firstLine = $head[0];
 $head = explode("/", $firstLine, 3);
-$branch = strtoupper($head[2]);
+$branch = trim(strtoupper($head[2]));
 
 $config = file('.git/config', FILE_USE_INCLUDE_PATH);
 $repositoryUrl = "";
@@ -29,7 +37,7 @@ for($i = 0; $i < count($config) - 1; $i++){
 
 <style>
   #NamingTable td:nth-child(2){
-    min-width: 200px;
+    min-width: 250px;
   }
   #DirectoryList {
     display: flex;
@@ -42,17 +50,26 @@ for($i = 0; $i < count($config) - 1; $i++){
     margin: 0px;
     margin-top: 30px;
   }
+  .version, .username {
+    font-size: 90%;
+    color: #aaaaaa;
+    font-style: italic;
+  }
+  .username:before {
+    content: "proposed by "
+  }
 </style>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <?php if($repositoryUrl && $branch){ ?>
-        <div class="alert alert-success" role="alert">
+        <div class="alert <?php echo $branch == 'MASTER' ? 'alert-danger' : 'alert-success' ?>" role="alert">
           <p>
             <strong>Current Respository: </strong><a href="<?php echo $repositoryUrl; ?>"><?php echo $repositoryUrl; ?></a><br/>
             <strong>Current Branch: </strong><?php echo $branch; ?>
           </p>
+          <?php if($branch == 'MASTER') { ?><p>Make sure you are not on the master branch. Please do your edits on a fork or a new branch.</p><?php } ?>
         </div>
       <?php } ?>
       
@@ -65,33 +82,38 @@ for($i = 0; $i < count($config) - 1; $i++){
       <p>I appreciate I've not given detailed instructions on setting this up, but there are only two components. Setting up the PHP and setting up the SCSS. For the PHP your simply downloading an application that can create a small virtual server on your computer (MAMP is great for Mac); and for SCSS you just need an app that can convert the SCSS to CSS and place it in the assets/css/ directory. Scout app is great for this.</p>
 
       <h2>Where to start?</h2>
+      
+      <p>Start by looking through the pages and pick a starting point. <strong><u>Copy and rename</u></strong> the file to something detailed. (eg. 'shorty-contributions_list') and add the the appropriate folder. You can add version numbers if there is already a mockup of that type.</p>
 
-      <p>Start by looking through the pages and pick a starting point. <strong><u>Copy and rename</u></strong> the file to something detailed. (eg. 'mockup-contributions_list') and add the the appropriate folder. You can add version numbers if there is already a mockup of that type.</p>
-
+      <h2>Find the right spot.</h2>
+      
+      <p>Make sure you put your files in the correct spot. Tasks you are currently working on should go in the '_tasks' directory. Any other design not directly tied to a task should go in the 'mockups' directory.</p>
+     
       <h2>Naming things.</h2>
-      <p>Let's follow some basic naming conventions. Pay attention to '-' and '_'. Use underscores to separate different words 'eg. task-detail'. Use dashes to separate different parts of a name. 'eg template-task_detail'. Doing this will allow me to organize these via a script later :D.</p>
+      
+      <p>Let's follow some basic naming conventions. Pay attention to '-' and '_'. Use underscores to separate different words 'eg. shorty-detail'. Use dashes to separate different parts of a name. 'eg shorty-task_detail-v01'. Doing this will allow me to parse these via a script :D.</p>
       <table id="NamingTable" class="table">
         <thead>
           <tr>
-            <th></th>
+            <th>Folder</th>
             <th>Name</th>
             <th>Purpose</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Mockup:</td>
-            <td><div>mockup-{{ page_name }}<br /><small>eg. <em>mockup-task_detail.php</em></small></td>
-            <td>Random design mockups. Put these up whenever you feel like sharing ideas.</td>
-          </tr>
-          <tr>
-            <td>Template:</td>
-            <td><div>template-{{ page_type }}<br /><small>eg. <em>template-dashboard.php</em></small></td>
+            <td>Template:<br/><small><em>/_template</em></small></td>
+            <td><div>{{template_name}}<br /><small>eg. <em>basic_page.php</em></small></div></td>
             <td>Templates for new type of page. Requires basic PHP knowledge to create a new one.</td>
           </tr>
           <tr>
-            <td>Task:</td>
-            <td><div>task-{{ task_name }}-v{{##}}<br /><small>eg. <em>task-task_viewer-v1.php</em></small></td>
+            <td>Mockup:<br/><small><em>/_mockup</em></small></td>
+            <td><div>{{user_name}}-{{page_name}}<br /><small>eg. <em>shorty-task_detail.php</em></small></td>
+            <td>Random design mockups. Put these up whenever you feel like sharing ideas.</td>
+          </tr>
+          <tr>
+            <td>Task:<br/><small><em>/_tasks</em></small></td>
+            <td><div>{{user_name}}-{{task_name}}-v{{##}}<br /><small>eg. <em>shorty-task_viewer-v01.php</em></small></div></td>
             <td>Proposal for a task. Append version number at end if ideas are being thrown around.</td>
           </tr>
         </tbody>
@@ -160,7 +182,7 @@ for($i = 0; $i < count($config) - 1; $i++){
             <div class="panel-body">
               <p>Template documents for you to use as a staring point.</p>
               <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-                <?php printDirectoriesAsList("./_templates") ?>
+                <?php printDirectoriesAsList("_templates") ?>
               </ul>
             </div>
           </div>
@@ -177,7 +199,7 @@ for($i = 0; $i < count($config) - 1; $i++){
             <div class="panel-body">
               <p>Proposals for tasks. Please use version numbers to keep organized, and not lose data.</p>
               <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-                <?php printDirectoriesAsList("./_tasks") ?>
+                <?php printDirectoriesAsList("_tasks") ?>
               </ul>
             </div>
           </div>
@@ -194,7 +216,7 @@ for($i = 0; $i < count($config) - 1; $i++){
             <div class="panel-body">
               <p>Random mockups, put anything you want to show the team in here at any time.</p>
               <ul id="DirectoryList" class="nav nav-pills nav-stacked">
-                <?php printDirectoriesAsList("./_mockups") ?>
+                <?php printDirectoriesAsList("_mockups") ?>
               </ul>
             </div>
           </div>
@@ -205,4 +227,4 @@ for($i = 0; $i < count($config) - 1; $i++){
   <div class="spacer"></div>
 </div>
 
-<?php require_once("./partials/footer.php"); ?>
+<?php require_once("partials/footer.php"); ?>
