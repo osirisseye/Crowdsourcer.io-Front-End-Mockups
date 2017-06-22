@@ -33,7 +33,7 @@ for($i = 0; $i < count($config) - 1; $i++){
   }
 }
 
-$mainRepo = 'https://github.com/MikeDaniel18/Crowdsourcer.io-Front-End-Mockups.git'
+$mainRepo = 'https://github.com/MikeDaniel18/Crowdsourcer.io-Front-End-Mockups.git';
 $isMaster = $branch == 'MASTER';
 $isMainRepo = $repositoryUrl = $mainRepo;
 
@@ -68,7 +68,7 @@ $isMainRepo = $repositoryUrl = $mainRepo;
   <div class="row">
     <div class="col-xs-12">
       <?php if($repositoryUrl && $branch){ ?>
-        <div class="alert <?php echo $isMainRepo || $isMaster ==  ? 'alert-danger' : 'alert-success' ?>" role="alert">
+        <div class="alert <?php echo $isMainRepo || $isMaster ? 'alert-danger' : 'alert-success' ?>" role="alert">
           <p>
             <strong>Current Respository: </strong><a href="<?php echo $repositoryUrl; ?>"><?php echo $repositoryUrl; ?></a><br/>
             <strong>Current Branch: </strong><?php echo $branch; ?>
