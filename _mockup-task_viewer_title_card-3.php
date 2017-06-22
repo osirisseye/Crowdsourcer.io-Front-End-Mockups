@@ -61,22 +61,25 @@ h1 {
     color: white;
 }
 .card {
-  min-height: 250px;
+  min-height: 350px;
   max-width: 760px;
   padding: 50px;
   box-shadow: 3px 3px 2px #c8d1d3;
 }
 #lowPriorityCard {
+  background-color: <?= $bodyColor ?>;
   border: 5px solid transparent;
   border-color: #29c75f;
   border-image-slice: 1;
 }
 #normalPriorityCard {
+  background-color: <?= $bodyColor ?>;
   border: 5px solid transparent;
   border-color: #FFBC11;
   border-image-slice: 1;
 }
 #highPriorityCard {
+  background-color: <?= $bodyColor ?>;
   border: 5px solid transparent;
   border-color: #E74C3C;
   border-image-slice: 1;
@@ -93,7 +96,6 @@ h1 {
   padding-right: 50px;
 }
 #titleCardBody{
-  background-color:  <?= $bodyColor ?>;
   margin-left: -50px;
   padding: 25px;
   margin-right: -50px;
