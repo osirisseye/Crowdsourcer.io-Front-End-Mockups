@@ -16,16 +16,13 @@ Let's follow some basic naming conventions. Pay attention to "-" and "\_" Use un
 
 | Type          | How To Name                | Second Header                                   |
 | ------------- | -------------------------- | ----------------------------------------------- |
-| Mockup:       | mockup-{{page\_name}}       | Random design to share ideas, start discussion. |
-| Template:     | template-{{page\_type}}     | Templates for a specific page type.             |
+| Mockup:       | mockup-{{page\_name}}      | Random design to share ideas, start discussion. |
+| Template:     | template-{{page\_type}}    | Templates for a specific page type.             |
 | Task:         | task-{{task-name}}-v{{##}} | Proposal for a task w/ version number.          |
 
-# XAMPP/APACHE setup for Windows
-If you asking 'why do I have to do it' then the simple answer is to setup your local server and view PHP files (yes we are working on those).
+# Setting up your environment.
 
-## Downloading XAMPP
-1. Download from here: https://www.apachefriends.org/pl/index.html.
-2. Unpack, install (pay attention where you install it).
+[Help setting up XAMPP](docs/XAMPP.md)
 
 ### For Junior PHP users
 3. In the installation directory you will find folder 'htdocs'.

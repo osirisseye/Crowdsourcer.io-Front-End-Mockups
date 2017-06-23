@@ -3,7 +3,11 @@
     // $loggedin = true;
 
     // Leave this in, loads all state and style.
-    include("./includes/full_page_header.php");
+
+    require_once("../root.php");
+    require_once("../includes/functions.php");
+    require_once("../includes/page_config.php");
+    require_once("../partials/header.php");
 
     // Custom PHP goes here...
 ?>
@@ -147,4 +151,4 @@
     </div>
 </div>
 <br/>
-<? include("./partials/footer.php"); ?>
+<?php require_once("../partials/footer.php"); ?>

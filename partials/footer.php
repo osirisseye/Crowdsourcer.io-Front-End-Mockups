@@ -1,4 +1,8 @@
-<? $is_mission_control ? include("mission_control_bottom.php") : ""?>
+<?php if($is_mission_control){ ?>
+        </div>
+    </div>
+</div>
+<?php } ?>
 </div>
 <div class="clearboth"></div>
 
@@ -26,7 +30,7 @@
         <div class="row vmarg-sm voffset-md">
             <div class="col-md-4 col-sm-6 footer-navigation">
                 <!--<h3><span class="icon-logo"></span></h3>-->
-                <img class="vmarg" src="assets/images/logo.svg">
+                <img class="vmarg" src="<?php echo ROOT ?>/assets/images/logo.svg">
                 <p class="links"><?=$footer_navigation_links?></p>
             </div>
             <div class="col-md-4 col-sm-6 footer-contacts">
@@ -52,11 +56,11 @@
     <?endif;?>
 
 <? endif; ?>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script type="text/javascript">
-                $(function () {
-                    $('[data-toggle="popover"]').popover()
-                })
-            </script>
-        </body>
+        <script src="<?php echo ROOT ?>/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
+    </body>
 </html>
