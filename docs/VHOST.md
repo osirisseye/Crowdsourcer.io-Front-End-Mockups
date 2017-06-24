@@ -31,7 +31,7 @@ A virtual host will allow you to use custom PHP variables such as '$_SERVER["DOC
 
 7. Navigate to Apache's httpd-vhosts.conf file, either in the XAMPP dashboard, or manually (Default is C:/XAMPP/Apache/conf/extra/httpd-vhosts.conf).
 
-8. *Only do this step once, ever :D*. Add the following code at the bottom of the document. This is basically saying, "Whenever someone goes to localhost on this machine, serve the contents in 'C:\XAMPP\htdocs". This should be the XAMPP dashboard. *Make sure to change the directories to match your environment, and mind where there are and are not quotation marks.*
+8. Add the following code at the bottom of the document. This is basically saying, "Whenever someone goes to localhost on this machine, serve the contents in 'C:\XAMPP\htdocs". This should be the XAMPP dashboard. *Make sure to change the directories to match your environment, and mind where there are and are not quotation marks.*
 ```
 NameVirtualHost 127.0.0.1
 <VirtualHost 127.0.0.1>
@@ -56,3 +56,5 @@ NameVirtualHost dev.example.com
 </VirtualHost>
 ```
 10. Restart apache and navigate to 'http://localhost' as well as your custom vhost (eg http://dev.example.com). You should see the XAMPP Dashboard for localhost, and then the contents of your project with the custom vhost.
+
+11. If you would like to set up additional virtual hosts, repeat all steps excluding steps #4 and #8.
