@@ -12,7 +12,7 @@
 
     // Custom PHP goes here...
 
-    $priority = "high";
+    $priority = "low";
     $status = "";
 
     if($priority == "low") {
@@ -205,10 +205,10 @@ p {
 
           </div>
           <div id="right-header" class="col-lg-6"> 
-            <div class="contributorsContainer">
+            <div class="contributorsContainer" data-toggle="tooltip" data-placement="left" title="Contributor">
               
               <div class="row">
-                <? include("coffeeandcream-user_profile-v1.php") ?>
+                <? include("coffeeandcream-user_profile-v2.php") ?>
               </div>
                           
             </div>
