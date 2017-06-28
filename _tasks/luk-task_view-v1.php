@@ -41,12 +41,6 @@
 ?>
 <style>
 
-hr {
-    width: 75%;
-    transition: width, .5s;
-    text-decoration: none;
-    color: white;
-}
 p {
   margin: 0px;
 }
@@ -91,8 +85,11 @@ p {
 
 
 .contributorsContainer {
-  background-color: #5C4ED4;
-  padding-bottom: 25px;
+  background-color: ;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width:75%;
+  float:right;
 }
 
 
@@ -171,7 +168,7 @@ p {
   margin-bottom: -50px;
 }
 #right-header {
-  border:solid 1px;
+  height:;
   
 }
 </style>
@@ -208,9 +205,13 @@ p {
 
           </div>
           <div id="right-header" class="col-lg-6"> 
-            <h1>SAMPLE TITLE</h1>
-            
-
+            <div class="contributorsContainer">
+              
+              <div class="row">
+                <? include("coffeeandcream-user_profile-v1.php") ?>
+              </div>
+                          
+            </div>
           </div>
 
           
