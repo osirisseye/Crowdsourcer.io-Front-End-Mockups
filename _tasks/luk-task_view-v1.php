@@ -167,8 +167,10 @@ p {
   margin-right: -50px;
   margin-bottom: -50px;
 }
+
+
 #right-header {
-  height:;
+  margin-top: 10px;
   
 }
 </style>
@@ -211,6 +213,7 @@ p {
               <div class="row">
                 
                 <? include("coffeeandcream-user_profile-v2.php") ?>
+
                 
               </div>
                           
@@ -236,7 +239,11 @@ p {
               <br>
           </div>
           
-          
+          <h5>Legend:
+            <span id="legendLo" class="label label-success"><span>Low priority</span></span>
+            <span id="legendNo" class="label label-warning badge-icon"><span>Normal priority</span></span>
+            <span id="legendHi" class="label label-danger badge-icon"><span>High priority</span></span>
+
         </div>
       </div>
     </div>
