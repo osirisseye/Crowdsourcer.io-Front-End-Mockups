@@ -172,6 +172,19 @@ p {
   margin-top: 10px;
   
 }
+
+@media (max-width: 1250px) {
+
+  #right-header {
+    width:80px;
+  }
+  #left-header {
+    max-width: 320px;
+    
+  }
+
+}
+
 </style>
 <div id="progressSection">
   <div id="myProgressbar" class="progress">
