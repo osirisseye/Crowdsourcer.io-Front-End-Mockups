@@ -198,7 +198,8 @@ p {
         <div id="titleCardHeader" class="row">
           <div id="left-header" class="col-lg-6"> 
             <h1>SAMPLE TITLE</h1>
-            <ul class="nav nav-tabs">
+            <h5>Approval: %</h5>
+            <ul class="nav nav-tabs text-center">
               <li class="active"><a data-toggle="tab" href="#sectionA">Description</a></li>
               <li><a data-toggle="tab" href="#sectionB">Completion notes</a></li>            
             </ul>
@@ -208,7 +209,9 @@ p {
             <div class="contributorsContainer" data-toggle="tooltip" data-placement="left" title="Contributor">
               
               <div class="row">
+                
                 <? include("coffeeandcream-user_profile-v2.php") ?>
+                
               </div>
                           
             </div>
