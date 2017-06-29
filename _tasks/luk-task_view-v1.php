@@ -85,7 +85,6 @@ p {
 
 
 .contributorsContainer {
-  background-color: ;
   padding-bottom: 10px;
   padding-top: 10px;
   width:75%;
@@ -200,14 +199,14 @@ p {
         <div id="titleCardHeader" class="row">
           <div id="left-header" class="col-lg-6"> 
             <h1>SAMPLE TITLE</h1>
-            <h5>Approval: %</h5>
+            <h5>Approval: 40 %</h5>
             <ul class="nav nav-tabs text-center">
               <li class="active"><a data-toggle="tab" href="#sectionA">Description</a></li>
               <li><a data-toggle="tab" href="#sectionB">Completion notes</a></li>            
             </ul>
 
           </div>
-          <div id="right-header" class="col-lg-6"> 
+          <div id="right-header" class="col-lg-6 col-md-4 col-sm-2"> 
             <div class="contributorsContainer" data-toggle="tooltip" data-placement="left" title="Contributor">
               
               <div class="row">

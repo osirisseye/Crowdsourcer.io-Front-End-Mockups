@@ -33,7 +33,6 @@
 }
 .user_profile_circle {  
   border: 3px rgba(255, 255, 255, 0.57);
-  t
   border-style: solid;
   color: black;
   margin-right: 15px;
@@ -45,7 +44,15 @@
   margin-left: 50px;
 }
 
+@media (max-width: 1250px) {
+
+  #userDetails {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
 }
+
 
 </style>
 <a href=<?=$actual_link?>  class="row" id="userProfile">
